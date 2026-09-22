@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Flow Task, organizador de tareas personales y escolares.">
+  <title>Inicio | Flow Task</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="site-shell">
+    <header>
+      <nav class="navbar navbar-expand-lg sticky-top py-3" aria-label="Navegación principal">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span class="brand-mark"><i class="bi bi-check2-square"></i></span>
+            <span>Flow Task</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 mt-3 mt-lg-0">
+              <li class="nav-item"><a class="nav-link active px-3" aria-current="page" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link px-3" href="tareas.html">Tareas</a></li>
+              <li class="nav-item"><a class="btn btn-flow ms-lg-2" href="nueva-tarea.html"><i class="bi bi-plus-lg me-1"></i>Nueva tarea</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="container py-4 py-lg-5">
+        <section class="hero p-4 p-lg-5 mb-5" aria-labelledby="welcomeTitle">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7 position-relative z-1">
+              <span class="badge rounded-pill text-bg-light border mb-3 px-3 py-2">Tu espacio para organizarte</span>
+              <h1 class="hero-title mb-3" id="welcomeTitle">Hola, Iván</h1>
+              <p class="hero-copy mb-4">Organiza tus tareas, avanza a tu ritmo y mantén todo bajo control.</p>
+              <a class="btn btn-flow btn-lg" href="nueva-tarea.html"><i class="bi bi-plus-circle me-2"></i>Crear tarea</a>
+            </div>
+            <div class="col-lg-5 hero-visual position-relative z-1" aria-hidden="true">
+              <div class="mini-board">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <span class="brand-mark"><i class="bi bi-stars"></i></span>
+                  <div class="flex-grow-1">
+                    <div class="mini-line mb-2"></div>
+                    <div class="mini-line short"></div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-3 mb-3"><i class="bi bi-check-circle-fill text-success fs-4"></i><div class="mini-line flex-grow-1"></div></div>
+                <div class="d-flex align-items-center gap-3 mb-3"><i class="bi bi-circle text-warning fs-4"></i><div class="mini-line flex-grow-1"></div></div>
+                <div class="d-flex align-items-center gap-3"><i class="bi bi-circle text-primary fs-4"></i><div class="mini-line flex-grow-1"></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5" aria-labelledby="summaryTitle">
+          <div class="d-flex justify-content-between align-items-end mb-3">
+            <div><p class="text-uppercase small fw-bold text-secondary mb-1">Hoy</p><h2 class="section-title h3 mb-0" id="summaryTitle">Resumen de tareas</h2></div>
+          </div>
+          <div class="row g-3" id="summaryCards"></div>
+        </section>
+
+        <section aria-labelledby="recentTitle">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="section-title h3 mb-0" id="recentTitle">Mis tareas recientes</h2>
+            <a href="tareas.html" class="btn btn-outline-secondary">Ver todas <i class="bi bi-arrow-right ms-1"></i></a>
+          </div>
+          <div class="row g-3" id="recentTasks"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer py-4 mt-5">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+        <span>© <span id="year"></span> Flow Task. Todos los derechos reservados.</span>
+        <div class="d-flex gap-4"><a href="#welcomeTitle">Sobre el proyecto</a><a href="mailto:contacto@flowtask.mx">Contacto</a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
